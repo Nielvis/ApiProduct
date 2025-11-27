@@ -25,7 +25,7 @@ namespace Api.Controllers
         }
 
         [HttpPost("")]
-        public async Task<IActionResult> CreateProduct([FromBody] Domain.Entities.Product product)
+        public async Task<IActionResult> CreateProduct([FromBody] Product product)
         {
             await _productService.CreateProductAsync(product);
             return CreatedAtAction(nameof(GetAllProducts), new { id = product.Id }, product);
