@@ -51,7 +51,7 @@ namespace Api.Controllers
                 return NotFound();
             }
             await _productService.UpdateProductAsync(id, product);
-            return NoContent();
+            return Ok(product);
         }
 
         [HttpDelete("")]
@@ -63,7 +63,7 @@ namespace Api.Controllers
                 return NotFound();
             }
             await _productService.DeleteProductAsync(id);
-            return NoContent();
+            return Ok(id);
         }
 
     }

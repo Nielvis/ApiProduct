@@ -25,9 +25,9 @@ namespace Data.Repositories
         }
 
        public async Task<Product> GetProductById(string Id)
-        {
+       {
            return await _products.Find(product => product.Id == Id).FirstOrDefaultAsync();
-        }
+       }
 
         public async Task CreateProduct(Product product)
         {
